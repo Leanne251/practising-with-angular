@@ -1,0 +1,45 @@
+<p>My Activities</p>
+
+<!-- Go back to this. Struggling to update values of an object that is mapped over!  -->
+<p>How quickly can you get three of a kind?</p>
+<button (click)="generateSports()" [disabled]="disableButton">
+  Generate Three Random Sports
+</button>
+<p>Your Time: {{ timer }}</p>
+<!-- <p>
+  <strong>{{ sportsObj.sportOne }}</strong>
+</p>
+<p>{{ sportsObj.sportTwo }}</p>
+<p>{{ sportsObj.sportThree }}</p> -->
+<p *ngFor="let sport of objValues">{{ sport }}</p>
+<button (click)="reset()">Reset</button>
+
+<!--  generate 3 random sports on the click of a button-->
+<!-- can I create a game where you can see how long it take you to get three of a kind?  -->
+<hr />
+<div *ngIf="!numberOfSports; else showAns">
+  <label>How many sports do you want to generate?</label>
+  <input type="text" [(ngModel)]="numberOfSports" (input)="getRandomArray()" />
+</div>
+<ng-template #showAns>
+  <p>Here are {{ numberOfSports }} random sports</p>
+  <button (click)="getRandomArray()">Shuffle</button>
+  <p *ngFor="let sport of randomArray">{{ sport }}</p>
+</ng-template>
+
+<!--
+
+  - click the button and it randomly gives you a sport from a list of three.
+
+   - create an array of three different sports
+   - use math.random to select a sport
+   - this will be assigned to a variable and displayed to the user.
+
+   - create three tiles that have their own random generator methods.
+   - then compare the three variables.
+
+  - do this for three different tiles
+  - if the values of each tile is the same user wins and clock is stopped.
+
+
+ -->

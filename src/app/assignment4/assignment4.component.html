@@ -1,0 +1,18 @@
+<p>assignment4 works!</p>
+<!-- $event gives us access to the emiited data from the child -->
+<!-- listen to OUTPUT EVENTS on the component you made it on!!!!!  -->
+<app-game-components
+  (outputEvent)="onIntervalFired($event)"
+></app-game-components>
+<!-- pass down the elements I want to use in the child, to then loop over -->
+
+<!-- YOU CAN LOOP OVER THE ELEMENT IN THE PARENT AND PASS THE ITEM OF THE LOOP
+OR YOU COULD PASS THE ARRAY AND LOOP OVER THE ARRAY!  -->
+
+<!-- <app-even [evenNumbers]="evenArray"></app-even> -->
+<app-odd [oddNumbers]="oddArray"></app-odd>
+
+<!-- OR -->
+
+<app-even *ngFor="let evenNum of evenArray" [evenNumber]="evenNum"></app-even>
+<!-- <app-odd [oddNumbers]="oddArray"></app-odd> -->

@@ -1,0 +1,9 @@
+<app-header (optionClicked)="chooseOption($event)"></app-header>
+<app-my-activities *ngIf="tabChoice === 'myActivities'"></app-my-activities>
+<app-simple-features
+  *ngIf="tabChoice === 'simpleFeatures'"
+  [author]="author"
+></app-simple-features>
+
+<!-- optionClick = what is clicked.
+If chooseOutput = simpleFeatures, show simple features -->

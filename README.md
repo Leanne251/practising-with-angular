@@ -1,27 +1,30 @@
-# WorkoutApp
+## THINGS I'M LEARNING
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+- Simply bind a property in a component HTML to a property in the .ts file
+- Pass a property down from parent element (where declared) to component
+- Pass a propety up, using emit from the child to parent (where declared)
 
-## Development server
+  - Child has output emitter
+  - parent, where while is called, has the 'catch'
+  - parent connects to out put on left and 'catches' event with $event on the right
+  - the type of $event is the type defived as the eventEmitter
+  - this could be a standard type (string, number) or could be a predefined interface object e.g Activity (which has been declared in a model and imported to the child)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Showing and hiding elements using \*ngIf
+- Using #local reference and <ng-template> for an else statment
+- Looping over elements using \*ngFor
+- Conditionally rendering CSS using [ngStyle], [ngClass], [class.class-name]
+- Using (input) and the input element to target the value
+- Acceses the input field using:
+  - (input) on the input tag
+  - (click) on the button tag
+  - [(ngModel)] on the input tag << Two way data binding.
 
-## Code scaffolding
+// LOOPS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+FOR-IN, loops over object properties!
+Doesn't really work in typescript. Can use let KEY: keyof type of OBJ but that didn;t seem to work either.
+for (const [key, value] of Object.entries(objName)){
+seemed to work
+}
+https://trungk18.com/experience/how-to-iterate-over-objects-in-typescript/

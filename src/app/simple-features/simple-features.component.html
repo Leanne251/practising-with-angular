@@ -1,0 +1,48 @@
+<div>
+  <h4>{{ title }}</h4>
+  <h5>by {{ author }}</h5>
+
+  <!-- <div *ngIf="choose; else ohNo">
+  <ng-template #ohNo>
+    <p>Another time?</p>
+  </ng-template> -->
+  <div>
+    <label>Add Simple Activitiy using local reference.value</label>
+
+    <input type="text" #simpleActivity />
+  </div>
+  <button (click)="addSimple(simpleActivity.value)">Add</button>
+  <div>
+    <!-- <p>My Simple Activity List:</p>
+  <div class="flex-row-container">
+    <p class="tile" *ngFor="let activity of myActivities">{{ activity }}</p>
+  </div> -->
+  </div>
+  <hr />
+
+  <div>
+    <label>Add Simple Activitiy using (input) and the event object</label>
+    <input type="text" (input)="addSimpleWithEvent($event)" />
+  </div>
+  <button (click)="addSimpleWithInput()">Add</button>
+  <div>
+    <hr />
+    <label>Add Simple Activitiy using two way data binding.</label>
+    <input type="text" [(ngModel)]="newActivity" />
+    <p>Two Way Data Binding: {{ newActivity }}</p>
+
+    <button (click)="addSimpleWithInput()">Add</button>
+
+    <p>My Simple Activity List:</p>
+    <div class="flex-row-container">
+      <p class="tile" *ngFor="let activity of myActivities; let i = index">
+        <button (click)="onDeleteItem(activity, i)">Remove</button
+        >{{ activity }}
+      </p>
+    </div>
+  </div>
+  <hr />
+  <p>Number of Activities in the list: {{ myActivities.length }}</p>
+
+  <!-- Add a delete button to the items in the list -->
+</div>

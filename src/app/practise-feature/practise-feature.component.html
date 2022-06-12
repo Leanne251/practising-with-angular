@@ -1,0 +1,42 @@
+<p>practise-feature works!</p>
+<p>Display all the activities and add new ones to the list</p>
+
+<p>Using Angular Tutorial - Edit Activity Two, defined in this component</p>
+<label for="activity">Activitiy Two Name</label>
+<!-- ngModel has bound the input value to the property defined in the .ts -->
+<input id="activity" [(ngModel)]="activityTwo.activity" />
+<p>Two way data binding displays the text</p>
+<p>{{ activityTwo.activity }}</p>
+<!-- Add the text in the input box to the list
+ -->
+
+<!-- ngFor, repeater directive. Repeats the HOST ELEMENT for each element in the list -->
+<ul>
+  <li *ngFor="let element of arrayOfActivities">
+    <!-- define a click event and then put the 'element' of the for loop as the parameter! -->
+    <!-- use ANGLUARS CLASS BINDING to conditionally style!  -->
+    <button
+      [class.selected]="element === selectedActivity"
+      (click)="onSelectActivity(element)"
+    >
+      <span
+        >{{ element.activity | uppercase }} - Intensity:
+        {{ element.intensity }}</span
+      >
+    </button>
+  </li>
+</ul>
+<!-- Create an if statement to show what has been selected on the buttons by changing what is the value of the variable -->
+
+<!-- <div *ngIf="selectedActivity">
+  <h2>{{ selectedActivity.activity }}</h2> -->
+<!-- Whilst in the if statement you can change the activity.  -->
+<!-- <label>Change Activity Name:</label>
+  <input [(ngModel)]="selectedActivity.activity" />
+</div>-->
+
+<!-- What if you wanted to show this detail above in a seperate component?  -->
+<!-- put the information in that component.. the code above, and then pass input properties!  -->
+
+<!-- ON THE LEFT IS TH INPUT PROPERTY IT BINDS TO IN THE CHILD COMPONENT -->
+<!-- ON THE RIGHT IN THE PROPERTY WE PASS DOWN FROM THE PARENT!  -->

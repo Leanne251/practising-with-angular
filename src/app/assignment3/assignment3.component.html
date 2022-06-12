@@ -1,0 +1,14 @@
+<p>assignment3 works!</p>
+
+<!-- Using a conditional statement with ngStyle to set css! -->
+
+<button (click)="onToggle()">Display Details</button>
+<p *ngIf="displayed">Password = tuna</p>
+<p
+  *ngFor="let item of myArray"
+  [ngStyle]="{ backgroundColor: item >= 5 ? 'blue' : 'transparent' }"
+  [class.white]="item >= 5"
+  [ngClass]="{ 'text-underline': item % 2 === 0 }"
+>
+  {{ item }}
+</p>

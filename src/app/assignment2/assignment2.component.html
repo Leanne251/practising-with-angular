@@ -1,0 +1,12 @@
+<label>Add Your User Input:</label>
+<input type="text" [(ngModel)]="myTextVariable" />
+<!-- if statement - the first part must be a ture or false variable
+the else part is put in ng-template with a # for local reference!  -->
+<p *ngIf="addedUser; else noUser">{{ myTextVariable }}</p>
+<ng-template #noUser>
+  <!--Example of using a function / condition in ngStyle  -->
+  <p [ngStyle]="{ backgroundColor: getColor() }">User Added</p>
+</ng-template>
+
+<!-- attribute selector can be equal to a condition / function or property. -->
+<button [disabled]="!myTextVariable" (click)="onClick()">Cick Me</button>
