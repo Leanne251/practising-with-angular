@@ -1,0 +1,13 @@
+<h2>Here are all of the Interests:</h2>
+<div class="flex-container">
+  <app-looped-interests
+    *ngFor="let element of interests"
+    [interestObject]="element"
+    (selectedInterest)="getDetails(element)"
+  ></app-looped-interests>
+</div>
+<hr />
+<app-interest-details
+  *ngIf="selectedInterest"
+  [selectedInterest]="selectedInterest"
+></app-interest-details>

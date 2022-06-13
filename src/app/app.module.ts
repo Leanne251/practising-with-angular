@@ -12,9 +12,15 @@ import { PractiseFeatureComponent } from './practise-feature/practise-feature.co
 import { SimpleFeaturesComponent } from './simple-features/simple-features.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { Assignment4Component } from './assignment4/assignment4.component';
-import { GameComponentsComponent } from './Assignment4/game-components/game-components.component';
-import { OddComponent } from './Assignment4/odd/odd.component';
-import { EvenComponent } from './Assignment4/even/even.component';
+import { GameComponentsComponent } from "./assignment4/game-components/game-components.component"
+import { OddComponent } from './assignment4/odd/odd.component';
+import { EvenComponent } from './assignment4/even/even.component';
+import {ListOfInterestsComponent} from "./list-of-interests/list-of-interests.component";
+import { LoopedInterestsComponent } from './list-of-interests/looped-interests/looped-interests.component';
+import { InterestDetailsComponent } from './list-of-interests/interest-details/interest-details.component';
+import { SavedActivitiesComponent } from './list-of-interests/interest-details/saved-activities/saved-activities.component'
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +35,12 @@ import { EvenComponent } from './Assignment4/even/even.component';
     Assignment4Component,
     GameComponentsComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    ListOfInterestsComponent,
+    LoopedInterestsComponent,
+    InterestDetailsComponent,
+    SavedActivitiesComponent
+
   ],
   imports: [
     BrowserModule,

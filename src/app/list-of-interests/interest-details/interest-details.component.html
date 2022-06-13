@@ -1,0 +1,14 @@
+<p>
+  Your Chosen Activity Is: <strong>{{ selectedInterest.interest }}</strong>
+</p>
+<p>Stats:</p>
+<p>Enjoyment: {{ selectedInterest.enjoyment }}</p>
+<p>Recommended: {{ selectedInterest.timesAWeek }} times a week</p>
+<button (click)="SaveActivity(selectedInterest)">Save Me</button>
+<button (click)="DeleteActivity(selectedInterest)">Delete Me</button>
+<hr />
+<!-- <p ngIf="thisSavedActivity">Your Saved Interests</p> -->
+<app-saved-activities
+  *ngFor="let item of thisSavedActivity"
+  [thisSavedActivity]="item"
+></app-saved-activities>

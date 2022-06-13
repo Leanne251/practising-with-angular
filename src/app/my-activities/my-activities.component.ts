@@ -60,7 +60,7 @@ getThreeRandomSports(){
     console.log("k",key, "v", value)
     let number = Math.floor(Math.random()*3)
     value = this.sportsArray[number]
-    //  this.sportsObj[key]  = value; THIS DOESN'T WORK BECAUSE KEY IS OF TYPE "STRING" AND IS NOT SPECIFIC ENOUGH. MUST STAT EXACT TYPE THAT IS N OBJECT
+    //  this.sportsObj[key]  = value; THIS DOESN'T WORK BECAUSE KEY IS OF TYPE "STRING" AND IS NOT SPECIFIC ENOUGH. MUST STATE EXACT TYPE THAT IS N OBJECT
     this.sportsObj[<"sportOne"| "sportTwo" | "sportThree">key]  = value;
     console.log("k",key, "v", value)
   }
@@ -76,7 +76,7 @@ stopTimer(){
  if (this.setValue.size === 1){
    clearInterval(this.interval)
    this.disableButton = true;
-   alert(`Your score is ${this.timer}`)
+   setTimeout(()=>alert(`Your score is ${this.timer}`),500)
 
 
  }

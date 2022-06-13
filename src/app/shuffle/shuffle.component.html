@@ -1,0 +1,10 @@
+<hr />
+<div *ngIf="!numberOfSports; else showAns">
+  <label>How many sports do you want to generate?</label>
+  <input type="text" [(ngModel)]="numberOfSports" (input)="getRandomArray()" />
+</div>
+<ng-template #showAns>
+  <p>Here are {{ numberOfSports }} random sports</p>
+  <button (click)="getRandomArray()">Shuffle</button>
+  <p *ngFor="let sport of randomArray">{{ sport }}</p>
+</ng-template>

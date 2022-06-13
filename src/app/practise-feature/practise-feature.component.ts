@@ -41,6 +41,7 @@ activity: string;
   onSelectActivity(activity: ActivityTwo ){
        this.selectedActivity = activity
        console.log(this.selectedActivity)
+
   }
 
 }
