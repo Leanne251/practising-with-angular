@@ -13,8 +13,42 @@
 <button (click)="toggle = !toggle">Toggle Numbers</button>
 
 <div *ngIf="toggle">
-  <p *ngFor="let odd of oddNumbers">{{ odd }}</p>
+  <p
+    *ngFor="let odd of oddNumbers"
+    [ngClass]="{ odd: odd % 2 !== 0 }"
+    [ngStyle]="{ backgroundColor: odd % 2 !== 0 ? 'green' : 'blue' }"
+  >
+    {{ odd }}
+  </p>
 </div>
+
+<!-- This is the same as *ngIf but using our own structural directive!  -->
+
+<div *appUnless="!toggle">
+  <p
+    *ngFor="let odd of oddNumbers"
+    [ngClass]="{ odd: odd % 2 !== 0 }"
+    [ngStyle]="{ backgroundColor: odd % 2 !== 0 ? 'green' : 'blue' }"
+  >
+    {{ odd }}
+  </p>
+</div>
+<hr />
 <div *ngIf="!toggle">
   <p *ngFor="let even of evenNumbers">{{ even }}</p>
+</div>
+
+<!-- The * is basically standing in for [ng-template], conditionally rendered! and the property binding to the if statement -->
+<ng-template [ngIf]="!toggle">
+  <p *ngFor="let even of evenNumbers">{{ even }}</p>
+</ng-template>
+<hr />
+<label>Guess a number to see if it's a match!</label>
+<input type="text" [(ngModel)]="value" />
+<p>Your Value Is: {{ value }}</p>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">You matched 5</p>
+  <p *ngSwitchCase="10">You matched 10</p>
+  <p *ngSwitchCase="20">You matched 20</p>
+  <p *ngSwitchDefault="'no match'">No match :(</p>
 </div>

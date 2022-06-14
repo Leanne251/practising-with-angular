@@ -19,7 +19,8 @@ import { ShuffleComponent } from './shuffle/shuffle.component';
 import {ListOfInterestsComponent} from "./list-of-interests/list-of-interests.component";
 import { LoopedInterestsComponent } from './list-of-interests/looped-interests/looped-interests.component';
 import { InterestDetailsComponent } from './list-of-interests/interest-details/interest-details.component';
-import { SavedActivitiesComponent } from './list-of-interests/interest-details/saved-activities/saved-activities.component'
+import { SavedActivitiesComponent } from './list-of-interests/interest-details/saved-activities/saved-activities.component';
+import { UnlessDirective } from './unless.directive'
 
 
 
@@ -41,7 +42,8 @@ import { SavedActivitiesComponent } from './list-of-interests/interest-details/s
     LoopedInterestsComponent,
     InterestDetailsComponent,
     SavedActivitiesComponent,
-    ShuffleComponent
+    ShuffleComponent,
+    UnlessDirective
 
   ],
   imports: [
