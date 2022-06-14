@@ -14,9 +14,12 @@
 <!-- <p *ngFor="let sport of objValues">{{ sport }}</p> -->
 <button (click)="reset()">Reset</button>
 
+<app-shuffle [sportsArray]="sportsArray"></app-shuffle>
 <!--  generate 3 random sports on the click of a button-->
-<!-- can I create a game where you can see how long it take you to get three of a kind?  -->
-<hr />
+<!-- can I create a game where you can see how long it take you to get three of a kind?
+
+
+  <hr />
 <div *ngIf="!numberOfSports; else showAns">
   <label>How many sports do you want to generate?</label>
   <input type="text" [(ngModel)]="numberOfSports" (input)="getRandomArray()" />
@@ -25,7 +28,7 @@
   <p>Here are {{ numberOfSports }} random sports</p>
   <button (click)="getRandomArray()">Shuffle</button>
   <p *ngFor="let sport of randomArray">{{ sport }}</p>
-</ng-template>
+</ng-template> -->
 
 <!--
 

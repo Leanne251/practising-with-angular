@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram id="ZI7Mypw8TPpWZt7pkty0" name="Page-1">
+        <mxGraphModel dx="366" dy="322" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="data - LIST PARENT&lt;br&gt;loop over data and pass each element down.&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="50" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="LOOPED ITEM&lt;br&gt;each element is displayed here.&lt;br&gt;Emits an EVENT." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="170" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="PARENT RECIEVES EVENT" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="50" width="200" height="90" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

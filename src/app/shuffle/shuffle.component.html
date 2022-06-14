@@ -1,10 +1,20 @@
 <hr />
 <div *ngIf="!numberOfSports; else showAns">
   <label>How many sports do you want to generate?</label>
-  <input type="text" [(ngModel)]="numberOfSports" (input)="getRandomArray()" />
+  <input type="text" [(ngModel)]="numberOfSports" />
 </div>
 <ng-template #showAns>
   <p>Here are {{ numberOfSports }} random sports</p>
   <button (click)="getRandomArray()">Shuffle</button>
   <p *ngFor="let sport of randomArray">{{ sport }}</p>
 </ng-template>
+
+<hr />
+<button (click)="toggle = !toggle">Toggle Numbers</button>
+
+<div *ngIf="toggle">
+  <p *ngFor="let odd of oddNumbers">{{ odd }}</p>
+</div>
+<div *ngIf="!toggle">
+  <p *ngFor="let even of evenNumbers">{{ even }}</p>
+</div>

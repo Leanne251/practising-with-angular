@@ -1,5 +1,14 @@
-<button class="tile" (click)="emitValue()" [class.selected]="isSelected">
+<button
+  class="tile"
+  (click)="emitValue()"
+  [class.selected]="interestObject === passedSelectedInterest"
+>
   {{ interestObject.interest }}
 </button>
 
 <!-- How do I make the square only highlight when that activity is choosen??? . Like in the practise component??!  -->
+
+<!-- [ngStyle]="{
+    backgroundColor:
+      interestObject === passedSelectedInterest ? 'yellow' : 'transparent'
+  }" -->

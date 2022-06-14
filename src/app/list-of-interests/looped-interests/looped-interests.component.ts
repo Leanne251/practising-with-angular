@@ -10,7 +10,7 @@ export class LoopedInterestsComponent implements OnInit {
 
 @Input() interestObject: interests
 @Output() selectedInterest = new EventEmitter<interests>()
-isSelected= false;
+@Input()passedSelectedInterest: interests;
 
   constructor() { }
 
@@ -19,7 +19,8 @@ isSelected= false;
 
   emitValue(){
     this.selectedInterest.emit()
-    this.isSelected = !this.isSelected
+    console.log("selectedInterest", this.selectedInterest)
+
 
 
   }

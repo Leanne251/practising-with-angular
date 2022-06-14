@@ -4,6 +4,7 @@
     *ngFor="let element of interests"
     [interestObject]="element"
     (selectedInterest)="getDetails(element)"
+    [passedSelectedInterest]="selectedInterest"
   ></app-looped-interests>
 </div>
 <hr />
