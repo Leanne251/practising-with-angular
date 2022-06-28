@@ -20,7 +20,15 @@ import {ListOfInterestsComponent} from "./list-of-interests/list-of-interests.co
 import { LoopedInterestsComponent } from './list-of-interests/looped-interests/looped-interests.component';
 import { InterestDetailsComponent } from './list-of-interests/interest-details/interest-details.component';
 import { SavedActivitiesComponent } from './list-of-interests/interest-details/saved-activities/saved-activities.component';
-import { UnlessDirective } from './unless.directive'
+import { UnlessDirective } from './unless.directive';
+import { AnimalsComponent } from './animals/animals.component';
+import { SharkDirective } from './shark.directive';
+import { ServicesComponent } from './assignment5/services/services.component';
+import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
+import { RoutingAndServicesComponent } from './routing-and-services/routing-and-services.component';
+import { RoutesComponent } from './routing-and-services/routes/routes.component';
+import { SingleRouteComponent } from './routing-and-services/routes/single-route/single-route.component'
 
 
 
@@ -43,7 +51,15 @@ import { UnlessDirective } from './unless.directive'
     InterestDetailsComponent,
     SavedActivitiesComponent,
     ShuffleComponent,
-    UnlessDirective
+    UnlessDirective,
+    AnimalsComponent,
+    SharkDirective,
+    ServicesComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
+    RoutingAndServicesComponent,
+    RoutesComponent,
+    SingleRouteComponent
 
   ],
   imports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { interestData } from './interests-data';
 import { interests } from './interests.model';
 
@@ -8,6 +8,7 @@ import { interests } from './interests.model';
   styleUrls: ['./list-of-interests.component.css']
 })
 export class ListOfInterestsComponent implements OnInit {
+
 
   interests: interests[] = interestData
   selectedInterest: interests

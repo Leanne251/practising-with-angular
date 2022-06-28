@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivityTwo } from '../activity.model';
+import { AnimalsComponent } from '../animals/animals.component';
 
 
 @Component({
@@ -14,6 +15,12 @@ export class HomeComponent implements OnInit {
   anInput="Hello"
 
   tabChoice=""
+
+  @ViewChild(AnimalsComponent) animals: AnimalsComponent
+
+  // ngAfterViewInit(){
+  //   console.log("This doesn't work :( ", this.animals.whoAmI())
+  // }
 
   constructor() { }
 

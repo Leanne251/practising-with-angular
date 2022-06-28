@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
 @Output() optionClicked = new EventEmitter<string>()
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,14 @@ showActivities(value:string){
     this.optionClicked.emit(value)
 }
 
+goToRoutes(){
+  this.router.navigate(['routes']), {RelativeTo: this.route}
+}
+
+goToAnimals(){
+  this.router.navigate(['animals']), {RelativeTo: this.route}
+  console.log("route", this.route)
+}
 
 }
 

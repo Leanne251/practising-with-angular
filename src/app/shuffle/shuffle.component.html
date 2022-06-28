@@ -1,4 +1,19 @@
 <hr />
+<p #showText></p>
+<div #favouriteSports>
+  <p>
+    I like Yoga, Pilates & Kayaking! Using ViewChild you can see my type &
+    properties in the console! This is where type: ElementRef.nativeElement
+    comes from. Then we can access all the properties on this value - just like
+    directly using a local reference. So with ElementREF - we need
+    .nativeElement!
+  </p>
+</div>
+
+<button (click)="onShowText(showText)">
+  Make Text Appear & learn about Element Ref in the console!
+</button>
+<hr />
 <div *ngIf="!numberOfSports; else showAns">
   <label>How many sports do you want to generate?</label>
   <input type="text" [(ngModel)]="numberOfSports" />

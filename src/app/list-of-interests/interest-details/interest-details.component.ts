@@ -8,6 +8,8 @@ import { interests } from '../interests.model';
 })
 export class InterestDetailsComponent implements OnInit {
 
+
+
   @Input() selectedInterest: interests
   @Output() savedActivitiy = new EventEmitter<interests>()
  thisSavedActivity: interests[]=[]

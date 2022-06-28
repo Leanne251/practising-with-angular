@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-shuffle',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShuffleComponent implements OnInit {
 
+  @ViewChild('favouriteSports') favouriteSports: any
   @Input() sportsArray: string[]
   randomArray: string[] = []
   numberOfSports: number;
@@ -28,7 +29,13 @@ toggle=true;
       let number = Math.floor(Math.random()*6)
       this.randomArray.push(this.sportsArray[number])
     }
-  }
 
+
+  }
+  onShowText(text: HTMLParagraphElement){
+   text.innerText = "Here is some text using local reference on P tag and a HTML property - innerText!"
+   console.log(this.favouriteSports)
+
+  }
 
 }
