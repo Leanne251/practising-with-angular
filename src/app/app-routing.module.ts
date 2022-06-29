@@ -5,13 +5,16 @@ import { RoutesComponent } from './routing-and-services/routes/routes.component'
 import { SingleRouteComponent } from './routing-and-services/routes/single-route/single-route.component';
 
 const routes: Routes = [
-  {path: 'routes', component: RoutesComponent},
-  {path: 'routes/:id/:name', component: SingleRouteComponent},
-  {path: 'animals', component: AnimalsComponent }
+	{
+		path: 'routes',
+		component: RoutesComponent,
+		children: [ { path: ':id/:name', component: SingleRouteComponent } ]
+	},
+	{ path: 'animals', component: AnimalsComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [ RouterModule.forRoot(routes) ],
+	exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

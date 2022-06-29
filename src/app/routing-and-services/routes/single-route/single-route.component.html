@@ -1,6 +1,19 @@
-<h3>User Info:</h3>
-<div style="border: 1px solid black; background-color: blanchedalmond">
-  <p>{{ user.id }}</p>
-  <p>{{ user.name }}</p>
-  <p>{{ user.route }}</p>
-</div>
+<h3>Route Info</h3>
+<p>Change the URL</p>
+<label>Type an ID number</label>
+<input type="number" [(ngModel)]="urlID" >
+<label>Type a url name</label>
+<input type="text" [(ngModel)]="urlName">
+
+<p>ID's from the snapshop when you load the url:</p>
+<p>Your selected id is {{id}}</p>
+<p>Your selected user name is {{name}}</p>
+
+<p>Your selected id is {{urlID}}</p>
+<p>Your selected user name is {{urlName}}</p>
+
+
+
+<a [routerLink]="['/routes', urlID, urlName]">Change url to entered info! </a> 
+
+
