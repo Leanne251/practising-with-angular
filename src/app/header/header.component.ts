@@ -30,6 +30,11 @@ goToAnimals(){
   console.log("route", this.route)
 }
 
+makeUp(){
+  this.router.navigate(['make-up']), {RelativeTo: this.route}
+
+}
+
 }
 
 // on click emit a variable to true and then show this section if variable = true?

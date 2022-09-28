@@ -3,7 +3,16 @@
 <!-- <div *ngFor="let user of users">
   <app-single-route [user]="user"></app-single-route>
 </div> -->
-<button>User 1</button>
-<button>User 2</button>
-<button>User 3</button>
+<button (click)="gotoUserOne()">User 1</button>
+<button routerLink="user2">User 2</button>
+<button (click)="getDynamicUser()">User 3</button>
+<button (click)="getDynamicUser()">User 4</button>
+
 <router-outlet></router-outlet>
+<hr />
+<app-route-item
+  *ngFor="let routes of myRoutes; let i = index"
+  [routes]="routes"
+  [index]="i"
+></app-route-item>
+<!-- make a dynamic function, which accepts variables to make the links dynami -->

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
@@ -28,7 +29,19 @@ import { ActiveUsersComponent } from './assignment5/active-users/active-users.co
 import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 import { RoutingAndServicesComponent } from './routing-and-services/routing-and-services.component';
 import { RoutesComponent } from './routing-and-services/routes/routes.component';
-import { SingleRouteComponent } from './routing-and-services/routes/single-route/single-route.component'
+import { SingleRouteComponent } from './routing-and-services/routes/single-route/single-route.component';
+import { User2Component } from './routing-and-services/routes/user2/user2.component';
+import { User3Component } from './routing-and-services/routes/user3/user3.component';
+import { RouteItemComponent } from './routing-and-services/routes/route-item/route-item.component';
+
+import { MakeUpComponent } from './make-up/make-up.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { FullStackPractiseComponent } from './full-stack-practise/full-stack-practise.component';
+import { AddAnItemComponent } from './full-stack-practise/add-an-item/add-an-item.component';
+import { AllItemsComponent } from './full-stack-practise/all-items/all-items.component';
+import { EditItemComponent } from './full-stack-practise/edit-item/edit-item.component';
+
+
 
 
 
@@ -59,14 +72,26 @@ import { SingleRouteComponent } from './routing-and-services/routes/single-route
     InactiveUsersComponent,
     RoutingAndServicesComponent,
     RoutesComponent,
-    SingleRouteComponent
+    SingleRouteComponent,
+    User2Component,
+    User3Component,
+    RouteItemComponent,
+
+    MakeUpComponent,
+     FullStackPractiseComponent,
+     AddAnItemComponent,
+     AllItemsComponent,
+     EditItemComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

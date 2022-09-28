@@ -1,0 +1,13 @@
+<h2>Add An Item</h2>
+
+<form [formGroup]="foodForm" class="form">
+  <label for="name">Name:</label>
+  <input type="text" formControlName="food" />
+  <label for="price">Price:</label>
+  <input type="number" formControlName="price" />
+  <label for="image">Image:</label>
+  <input type="text" formControlName="image" />
+  <label for="description">Description:</label>
+  <input type="text" formControlName="description" />
+  <button type="submit" (click)="submitData()">Submit</button>
+</form>

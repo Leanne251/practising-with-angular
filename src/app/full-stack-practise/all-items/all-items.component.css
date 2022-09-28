@@ -1,0 +1,20 @@
+
+.all-items{
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+}
+
+.box-size{
+  height: 350px;
+  width: 350px;
+
+}
+
+ul{
+  border: 2px solid black;
+}
+
+li{
+  list-style: none;
+}

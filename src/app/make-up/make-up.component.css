@@ -1,0 +1,12 @@
+.make-up-images{
+  border: 1px black solid;
+  padding: 10px;
+}
+
+.make-up-container{
+  display: flex;
+  flex-wrap: wrap;
+  direction: row
+
+
+}

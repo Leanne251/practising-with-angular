@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MyRoutes } from 'src/app/myroutes.model';
+import { MyRouteService } from 'src/app/services/myroutes.service';
 
 @Component({
   selector: 'app-routes',
@@ -25,9 +28,23 @@ export class RoutesComponent implements OnInit {
   },
 ]
 
-  constructor() { }
+myRoutes: MyRoutes[];
+
+  constructor( private myRouteService: MyRouteService, private router:Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.myRoutes = this.myRouteService.getTheRoutes()
+    console.log(this.myRoutes)
   }
 
+
+  gotoUserOne(){
+    this.router.navigate(["routes", 1,"max"]), {relativeTo: this.route}
+  }
+
+  getDynamicUser(){
+
+  }
 }
+

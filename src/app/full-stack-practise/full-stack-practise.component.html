@@ -1,0 +1,12 @@
+<div class="button-container">
+  <button *ngIf="showAll">Show All Items</button>
+  <button (click)="sortByName()">Order by Name (A-Z)</button>
+  <button (click)="orderByPrice()">Order by Price (low-high)</button>
+</div>
+<form>
+  <span>Search for items under £<input type="text" /></span>
+  <button>Search</button>
+</form>
+
+<app-all-items></app-all-items>
+<app-add-an-item></app-add-an-item>

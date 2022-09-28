@@ -1,0 +1,50 @@
+<h3>Search For Make Up</h3>
+
+<form (ngSubmit)="search()" [formGroup]="selectMakeUp">
+  <label>Product Type:</label>
+  <select formControlName="product_type">
+    <option disabled>-- select an option --</option>
+    <option>Mascara</option>
+    <option>Bronzer</option>
+    <option>Blush</option>
+  </select>
+  <br />
+  <label>Brand:</label>
+  <select formControlName="brand">
+    <option disabled selected value>-- select an option --</option>
+    <option>Benefit</option>
+    <option>Dior</option>
+    <option>NYX</option>
+  </select>
+  <br />
+  <button type="submit">Search</button>
+</form>
+
+<p>Your Search Results:</p>
+<div class="make-up-container" *ngFor="let result of searchResults">
+  <div class="make-up-images">
+    <p>{{ result.name }}</p>
+    <a [href]="result.image_link" target="_blank">
+      <img [src]="result.api_featured_image" [width]="100" [height]="100" />
+    </a>
+    <p>{{ result.description }}</p>
+    <p>{{ result.brand }}</p>
+  </div>
+</div>
+
+<form (ngSubmit)="searchArray()" [formGroup]="customSearchForm">
+  <div formArrayName="array-search">
+    <div *ngFor="let arrayControl of controls; let i = index" formGroupName="i">
+      <input type="text" formControlName="key-word" />
+    </div>
+  </div>
+
+  <button type="button" (click)="getKeyWordsArray()">Add Key Word</button>
+</form>
+
+<h4>Here are some mascaras:</h4>
+<div class="make-up-container">
+  <div class="make-up-images" *ngFor="let image of data">
+    <img [src]="image.image_link" />
+  </div>
+</div>

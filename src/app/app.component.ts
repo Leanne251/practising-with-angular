@@ -14,7 +14,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(AnimalsComponent) animals: AnimalsComponent
 
   ngAfterViewInit() {
-    console.log(this.animals.whoAmI()); // I am a pup component!
+    // console.log(this.animals.whoAmI()); // I am a pup component!
   }
 
 }
