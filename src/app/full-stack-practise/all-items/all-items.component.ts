@@ -11,7 +11,7 @@ export class AllItemsComponent implements OnInit {
     return this.fullStackService.immutableFoods;
   }
 
-  @Output() editMode = new EventEmitter();
+  @Output() editMode = new EventEmitter<{}>();
 
   constructor(private fullStackService: FullStackServiceService) {}
 
@@ -32,8 +32,8 @@ export class AllItemsComponent implements OnInit {
     });
   }
 
-  edit() {
-    this.editMode.emit('true');
+  edit(id: number) {
+    this.editMode.emit({ editMode: true, id: id });
   }
 }
 

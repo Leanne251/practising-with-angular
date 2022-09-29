@@ -4,9 +4,11 @@
   <button (click)="orderByPrice()">Order by Price (low-high)</button>
 </div>
 <form>
-  <span>Search for items under £<input type="text" /></span>
-  <button>Search</button>
+  <span>Search for items under £<input type="text" #price /></span>
+  <button (click)="findItemsLess(price.value)">Search</button>
 </form>
 
-<app-all-items></app-all-items>
-<app-add-an-item></app-add-an-item>
+<app-all-items (editMode)="setEditMode($event)"></app-all-items>
+<app-add-an-item [edit]="edit" [editId]="editId"></app-add-an-item>
+
+<!-- (editId)="setEditId($event)" -->

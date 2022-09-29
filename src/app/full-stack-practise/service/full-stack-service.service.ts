@@ -27,12 +27,11 @@ export class FullStackServiceService {
     return this.http.post(url, foodData);
   }
 
-  // updateFoodItem(foodData: any) {
-  //   console.log(foodData.id, 'id');
-  //   let id = 1;
-  //   let url = `http://127.0.0.1:8000/food/${id}`;
-  //   return this.http.put(url, foodData);
-  // }
+  updateFoodItem(foodData: any, id: number) {
+    console.log(foodData.id, foodData, 'id');
+    let url = `http://127.0.0.1:8000/food/${id}`;
+    return this.http.put(url, foodData);
+  }
 
   deleteItem(id: number): Observable<any> {
     let url = `http://127.0.0.1:8000/food/${id}`;
@@ -41,6 +40,16 @@ export class FullStackServiceService {
 
   sortByName(): Observable<any> {
     let url = 'http://127.0.0.1:8000/food/sort';
+    return this.http.get(url);
+  }
+
+  sortByPrice() {
+    let url = `http://127.0.0.1:8000/food/order-by-price`;
+    return this.http.get(url);
+  }
+
+  findByPrice(price: number) {
+    let url = `http://127.0.0.1:8000/food/less-than/${price}`;
     return this.http.get(url);
   }
 

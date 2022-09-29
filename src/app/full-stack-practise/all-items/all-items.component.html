@@ -6,7 +6,7 @@
       <li>£{{ food.price }}.00</li>
       <li><img [src]="food.image" height="100" width="100" /></li>
       <li>{{ food.description }}</li>
-      <button>Edit Me</button>
+      <button (click)="edit(food.id)">Edit Me</button>
       <button (click)="delete(food.id)">Delete Me</button>
     </ul>
   </div>

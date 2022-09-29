@@ -1,4 +1,6 @@
-<h2>Add An Item</h2>
+<h2 *ngIf="!edit">Add An Item</h2>
+
+<h2 *ngIf="edit">Edit An Item</h2>
 
 <form [formGroup]="foodForm" class="form">
   <label for="name">Name:</label>
@@ -9,5 +11,6 @@
   <input type="text" formControlName="image" />
   <label for="description">Description:</label>
   <input type="text" formControlName="description" />
-  <button type="submit" (click)="submitData()">Submit</button>
+  <button *ngIf="!edit" type="submit" (click)="submitData()">Submit</button>
+  <button *ngIf="edit" type="submit" (click)="editData()">Submit</button>
 </form>

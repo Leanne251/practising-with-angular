@@ -9,6 +9,7 @@ import { FullStackServiceService } from './service/full-stack-service.service';
 export class FullStackPractiseComponent implements OnInit {
   showAll = false;
   edit: boolean;
+  editId: number;
 
   constructor(private fullStackService: FullStackServiceService) {}
 
@@ -17,13 +18,33 @@ export class FullStackPractiseComponent implements OnInit {
   sortByName() {
     this.fullStackService.sortByName().subscribe((data) => {
       this.fullStackService.setFoodItems(data);
+      this.edit = false;
     });
   }
 
-  // setEditMode(editMode: boolean) {
-  //   this.edit = editMode;
-  //   console.log('edit', this.edit);
+  orderByPrice() {
+    this.fullStackService.sortByPrice().subscribe((data) => {
+      this.fullStackService.setFoodItems(data);
+      this.edit = false;
+    });
+  }
+
+  setEditMode(editObject: any) {
+    this.edit = editObject.editMode;
+    this.editId = editObject.id;
+  }
+
+  findItemsLess(price: any) {
+    this.fullStackService.findByPrice(price).subscribe((data) => {
+      this.fullStackService.setFoodItems(data);
+    });
+  }
+
+  // editIsFalse(value: boolean) {
+  //   console.log(value);
+  //   this.edit = value;
   // }
 }
 
-// we want to use getters & setters for our data.
+// call the find less than function in the service with the price in the input field.
+// use hash binding.
